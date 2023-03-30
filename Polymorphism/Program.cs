@@ -20,21 +20,21 @@
 
     //Method hiding
 
-    class parent
-    {
-        public void show()
-        {
-            Console.WriteLine("Parent Class");
-        }
-    }
-    class child:parent
-    {
-        public new void show()
-        {
-            //base.show(); //To call parent show function
-            Console.WriteLine("Child Class");
-        }
-    }
+    //class parent
+    //{
+    //    public void show()
+    //    {
+    //        Console.WriteLine("Parent Class");
+    //    }
+    //}
+    //class child:parent
+    //{
+    //    public new void show()
+    //    {
+    //        //base.show(); //To call parent show function
+    //        Console.WriteLine("Child Class");
+    //    }
+    //}
 
     class employee
     {
@@ -58,6 +58,23 @@
         public new void printFullName()
         {
             Console.WriteLine(fname + " " + lname + " FTE");
+        }
+    }
+
+    //DYNAMIC POLYMORPHISM
+
+    class parent
+    {
+        public virtual void print()
+        {
+            Console.WriteLine("Method of Parent class"); ;
+        }
+    }
+    class child : parent
+    {
+        public override void print()
+        {
+            Console.WriteLine("Method of Child class"); ;
         }
     }
 
@@ -134,7 +151,19 @@
 
 
             //Method Hiding ends here
+            
+            //STATIC POLYMORPHISM ENDS HERE........
 
+            
+            
+            //.............................................
+            
+            
+            //DYNAMIC POLYMORPHISM STARTS HERE........
+
+            //Method Overriding
+            child child = new child();
+            child.print();
         }
     }
 }
